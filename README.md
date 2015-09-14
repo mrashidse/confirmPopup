@@ -1,2 +1,2 @@
 # confirmPopup
-Get rid of old confirm dialogue and Try to use stylish confirmPopup. 
+It is jQuery plugin which gives you a customizable confirm dialogue with support for changing confirmation message and many more.
