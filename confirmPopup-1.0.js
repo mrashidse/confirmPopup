@@ -23,6 +23,7 @@
 		var _selectedDecision = '';
 		var cpSubContainerTop = 0;
 		var cpSubContainerLeft = 0;
+		var isPopupOpen = false;
 		
 
 		//***Default Options.
@@ -227,7 +228,8 @@
 		var openPopupBox = function() {
 
 			//**** ConfirmationPopup
-			$('#cpMainContainer').show()
+			$('#cpMainContainer').show();
+			isPopupOpen = true;
 		};
 
 
@@ -238,6 +240,7 @@
 		var closePopupBox = function() {
 			$('body').find('#cpMainContainer').off();
 			$('body').find('#cpMainContainer').remove().hide();
+			isPopupOpen = false;
 		};
 
 
@@ -279,8 +282,10 @@
 			 * Resize Event Handle
 			 */
 			W.resize(function(){
-				generatePopupHtml();
-				openPopupBox();
+				if(isPopupOpen === true){
+					generatePopupHtml();
+					openPopupBox();
+				}
 			});
 
 		};
