@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="../jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="confirmPopup-1.0.js"></script>
+	<style type="text/css">
+
+		/* Head Row styles */
+		.rowDiv{
+			float: left;
+			width: 700px;
+			height: 35px;
+		}
+		input{
+			border: 1px solid #333;
+			width: 300px;
+			height: 30px;
+		}
+		.clr{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div id="mainContainerDiv">
+		<form id="frmTestData" method="post" action="">
+			<div class="rowDiv">
+				<div class="colDiv">
+					<input type="text" id="name" name="name" />
+				</div>
+			</div>
+			<div class="clr"></div>
+			
+			<div class="rowDiv">
+				<div class="colDiv">
+					<input type="text" id="type" name="type" />
+				</div>
+			</div>
+			<div class="clr"></div>
+
+
+			<input type="submit" id="btnSaveData" value="Save Data" />
+		</form>
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btnSaveData').confirmPopup({
+	        beforeStart: function(){
+	            alert('beforeInitialize');
+	        },
+	        onPositiveDecision: function(){
+	        	alert('Positive Decisions');
+	        },
+	        onNegativeDecision: function() {
+				alert('Negative Decisions');
+			},
+	    });
+	})
+	</script>
+</body>
+</html>
