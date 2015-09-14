@@ -10,11 +10,12 @@ It is jQuery plugin which gives you a customizable confirm dialogue with support
 2. Download or Copy [ConfirmPopup](https://github.com/mrashidse/confirmPopup/blob/master/confirmPopup-1.0.js)
 3. Include after jQuery lib
 4. Now you are ready to Call ConfirmPopup on you selector For Example: 
- * ``` $('#btnSaveData').confirmPopup(); ```
-  
-Note: ConfirmPopup's Default settings are: 
-```
-    $('#btnSaveData').confirmPopup({
+ * ` $('#btnSaveData').confirmPopup(); `
+5. You can change it according to you requirments.
+6. You can also download [here](https://github.com/mrashidse/confirmPopup/blob/master/confirmPopupTest.html) a demo file and run it into you browser.
+7. ConfirmPopup's Default settings are: 
+``` 
+ $('#btnSaveData').confirmPopup({
       message: 'Are you sure you want to save this information?',
       positiveBtnText:'Yes',
       negativeBtnText: 'No',
@@ -38,6 +39,5 @@ Note: ConfirmPopup's Default settings are:
 			},
     }); 
 ```
-You can change it according to you requirments.
 	
 
